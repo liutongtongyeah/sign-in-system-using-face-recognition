@@ -1,0 +1,20 @@
+﻿生成启动时间为 2017/6/11 4:56:22。
+     1>项目“E:\lbp_gabor\LBP\LBP.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         F:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\CLAPACK-3.1.1-VisualStudio\INCLUDE" /IC:\opencv249\opencv\build\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _LIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt FaceFeature.cpp
+         FaceFeature.cpp
+       Link:
+         F:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\lbp_gabor\Debug\LBP.dll" /INCREMENTAL /NOLOGO /LIBPATH:"E:\CLAPACK-3.1.1-VisualStudio\LIB\Win32" BLASd.lib clapackd.lib libf2cd.lib tmglibd.lib opencv_core249d.lib opencv_imgproc249d.lib opencv_highgui249d.lib opencv_ml249d.lib opencv_video249d.lib opencv_features2d249d.lib opencv_calib3d249d.lib opencv_objdetect249d.lib opencv_contrib249d.lib opencv_legacy249d.lib opencv_flann249d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\lbp_gabor\Debug\LBP.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\lbp_gabor\Debug\LBP.lib" /MACHINE:X86 /DLL Debug\1.obj
+         Debug\FaceMngr.obj
+         Debug\Fld.obj
+         Debug\gabor.obj
+         Debug\FaceFeature.obj
+         Debug\Light.obj
+         Debug\Light.obj
+         Debug\Subspace.obj
+         LBP.vcxproj -> E:\lbp_gabor\Debug\LBP.dll
+     1>已完成生成项目“E:\lbp_gabor\LBP\LBP.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:23.63
