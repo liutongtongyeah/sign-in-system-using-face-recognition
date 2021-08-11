@@ -2,11 +2,9 @@
 
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/contrib/contrib.hpp>
-//#include<opencv2/imgproc/imgproc.hpp>
 #include<cv.h>
 #include <fstream>
 #include <iostream>
-//using namespace std;
 using namespace cv;
 
 #define CV_COEF_FC1 CV_32FC1
@@ -52,7 +50,7 @@ public:
 	inputs:		M-by-N, similar with Pca, but the average of each row should be 0. inputs will be changed.
 	trainIds:	ID tags of train samples. should be of the same length with N.
 	postLdaDimCoef:	if = 0, it will be automatically chosen as (classnumber - 1)
-	( See P. N. Belhumeur£¬Eigenfaces vs. fisherfaces: recognition using
+	( See P. N. BelhumeurÂ£Â¬Eigenfaces vs. fisherfaces: recognition using
 	class specific linear projection)
 	If so, if (classnumber - 1) < 3, in case the dim is too small, it will be min(N, 3)
 	return:		the number of classes used for training(How many diff people).
