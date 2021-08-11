@@ -78,12 +78,11 @@ void RunLightPrep(CvMat *faceImg8)
 	cvPow(g_tfaceImg32, g_tfaceImg32, gamma); /* gamma */
 	cvFilter2D(g_tfaceImg32, g_tfaceImg32, g_h); /* DoG */
 
-	/* 对比度均衡化 */
 
 	cvAbs(g_tfaceImg32, g_tfaceImg32_1);
 	cvPow(g_tfaceImg32_1, g_tfaceImg32_1, alpha);
 	double m = pow(cvAvg(g_tfaceImg32_1).val[0], 1 / alpha);
-	cvScale(g_tfaceImg32, g_tfaceImg32, 1 / m);//深度转换
+	cvScale(g_tfaceImg32, g_tfaceImg32, 1 / m);//脡卯露脠脳陋禄禄
 
 	cvAbs(g_tfaceImg32, g_tfaceImg32_1);
 	cvMinS(g_tfaceImg32_1, tau, g_tfaceImg32_1);
