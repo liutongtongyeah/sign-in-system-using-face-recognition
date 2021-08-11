@@ -45,7 +45,6 @@ void GenFilterKernel(CvMat *h, int filterType, /*bool bHighpass,*/ double d0, in
 			case 2:
 				z = 1 / (1 + pow(r / d0, 2 * filterType));
 			}
-			//if (bHighpass) z = 1-z; // incorrect for spatial domain
 			cvmSet(h, y, x, z);
 		}
 	}
