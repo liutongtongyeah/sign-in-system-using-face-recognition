@@ -1,6 +1,6 @@
 /*
 Gabor + Local Binary Patterns
-³ÌĞòÖĞÔ²ĞÎLBPËã×ÓºÍĞı×ª²»±äLBPÁ½¸öº¯Êı¾ù¿ÉÊ¹ÓÃ
+ç¨‹åºä¸­åœ†å½¢LBPç®—å­å’Œæ—‹è½¬ä¸å˜LBPä¸¤ä¸ªå‡½æ•°å‡å¯ä½¿ç”¨
 */
 
 #include "FaceFeature.h"
@@ -30,7 +30,7 @@ int InitFeature(CvSize imgSize)
 	gKerNum = InitGabor(imgSize);
 
 	g_faceSz = imgSize;
-	lgbpFaceSz = Size(imgSize.width - 2, imgSize.height - 2); // lgbpFace±ÈÔ­Í¼ÏñĞ¡ 2ÏñËØ
+	lgbpFaceSz = Size(imgSize.width - 2, imgSize.height - 2); // lgbpFaceæ¯”åŸå›¾åƒå° 2åƒç´ 
 	lgbpFace.create(lgbpFaceSz.height, lgbpFaceSz.width, CV_8UC1);
 	tLgbpFace1.create(lgbpFaceSz.height, lgbpFaceSz.width, CV_8UC1);
 	tLgbpFace2.create(lgbpFaceSz.height, lgbpFaceSz.width, CV_32FC1);
@@ -66,9 +66,7 @@ void GetFeature(CvArr *faceImg32, CvMat *ft32)
 			//imshow("lgbp face", lgbpFace);
 			//waitKey();
 
-			//???????????
-			lgbpFace = (lgbpFace - quantizeIntv / 2) / quantizeIntv; // have to minus quantizeIntv/2 first, because OpenCV rounds the division result for uchar
-			//
+			lgbpFace = (lgbpFace - quantizeIntv / 2) / quantizeIntv;
 
 			GetLgbpHist(lgbpFace, tmpFt.colRange(idxc*ftNum1, (idxc + 1)*ftNum1));
 			idxc++;
@@ -79,7 +77,7 @@ void GetFeature(CvArr *faceImg32, CvMat *ft32)
 	ft.copyTo(Mat(ft32));
 }
 
-//Ğı×ª²»±äLBP
+//æ—‹è½¬ä¸å˜LBP
 //void GenLgbpFace(Mat & gface, Mat & lgbpFace)
 //{
 //	int H = g_faceSz.height, W = g_faceSz.width;
@@ -122,7 +120,7 @@ void GetFeature(CvArr *faceImg32, CvMat *ft32)
 //	lgbpFace += tLgbpFace1;
 //}
 
-//Ô²ĞÎLBPËã×Ó
+//åœ†å½¢LBPç®—å­
 void GenLgbpFace(Mat & src, Mat & dst)
 {
 	int radius = 1;
